@@ -12,6 +12,8 @@
 		566E7CE82B066E1E008A875C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CE72B066E1E008A875C /* ViewController.swift */; };
 		566E7CED2B066E20008A875C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566E7CEC2B066E20008A875C /* Assets.xcassets */; };
 		566E7CF02B066E20008A875C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566E7CEE2B066E20008A875C /* LaunchScreen.storyboard */; };
+		566E7CFF2B067086008A875C /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CFE2B067086008A875C /* PostImageViewController.swift */; };
+		566E7D012B067097008A875C /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7D002B067097008A875C /* PostImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		566E7CEC2B066E20008A875C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		566E7CEF2B066E20008A875C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		566E7CF12B066E20008A875C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		566E7CFE2B067086008A875C /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		566E7D002B067097008A875C /* PostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 		566E7CE22B066E1E008A875C /* DearMe */ = {
 			isa = PBXGroup;
 			children = (
+				566E7CFD2B067075008A875C /* Models */,
+				566E7CFC2B067071008A875C /* Views */,
+				566E7CFB2B067066008A875C /* Controllers */,
 				566E7CE32B066E1E008A875C /* AppDelegate.swift */,
 				566E7CE52B066E1E008A875C /* SceneDelegate.swift */,
 				566E7CE72B066E1E008A875C /* ViewController.swift */,
@@ -62,6 +69,29 @@
 				566E7CF12B066E20008A875C /* Info.plist */,
 			);
 			path = DearMe;
+			sourceTree = "<group>";
+		};
+		566E7CFB2B067066008A875C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				566E7CFE2B067086008A875C /* PostImageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		566E7CFC2B067071008A875C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				566E7D002B067097008A875C /* PostImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		566E7CFD2B067075008A875C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566E7CFF2B067086008A875C /* PostImageViewController.swift in Sources */,
 				566E7CE82B066E1E008A875C /* ViewController.swift in Sources */,
 				566E7CE42B066E1E008A875C /* AppDelegate.swift in Sources */,
+				566E7D012B067097008A875C /* PostImage.swift in Sources */,
 				566E7CE62B066E1E008A875C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
