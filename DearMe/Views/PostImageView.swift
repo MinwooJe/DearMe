@@ -9,7 +9,7 @@ import UIKit
 
 final class PostImageView: UIView {
     
-    private let cameraImageView: UIImageView = {
+    let cameraImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "PostImagePicker")
         imageView.contentMode = .scaleAspectFill
@@ -37,9 +37,22 @@ final class PostImageView: UIView {
     }
 }
 
+// MARK: GestureRecognizer Delegate Implement
+
+extension PostImageView: UIGestureRecognizerDelegate {
+    
+    func configureTapPostImageAction(_ target: Any, _ action: Selector) {
+        let tapGesture = UITapGestureRecognizer(target: target, action: action)
+        tapGesture.delegate = self
+        cameraImageView.isUserInteractionEnabled = true
+        cameraImageView.addGestureRecognizer(tapGesture)
+    }
+}
+
 // MARK: Configure Layout
 
 extension PostImageView {
+    
     private func configureSubViews() {
         [cameraImageView, descriptionLabel].forEach {
             addSubview($0)
