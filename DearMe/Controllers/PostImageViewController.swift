@@ -8,6 +8,12 @@
 import UIKit
 
 class PostImageViewController: UIViewController {
+    
+    let v = PostImageView()
+    
+    override func loadView() {
+        view = v
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
