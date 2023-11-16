@@ -97,7 +97,8 @@ extension PostImageViewController: UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             postImageView.cameraImageView.image = image
             dismiss(animated: true)
