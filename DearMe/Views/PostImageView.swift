@@ -1,5 +1,5 @@
 //
-//  PostImage.swift
+//  PostImageView.swift
 //  DearMe
 //
 //  Created by 제민우 on 11/17/23.
