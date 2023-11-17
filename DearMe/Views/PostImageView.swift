@@ -9,9 +9,13 @@ import UIKit
 
 final class PostImageView: UIView {
     
+    var imageObservation: NSKeyValueObservation?
+    
     let cameraImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "PostImagePicker")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -56,8 +60,8 @@ extension PostImageView {
         [cameraImageView, descriptionLabel].forEach {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
+            }
         }
-    }
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
