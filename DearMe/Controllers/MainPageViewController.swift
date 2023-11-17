@@ -9,8 +9,16 @@ import UIKit
 
 final class MainPageViewController: UIViewController {
 
+    private let mainPageView = MainPageView()
+
+    override func loadView() {
+        view = MainPageView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
+
 }

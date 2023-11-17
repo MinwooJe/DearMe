@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        self.window?.rootViewController = PostImageViewController()
+        self.window?.rootViewController = MainPageViewController()
         
         self.window?.backgroundColor = .systemBackground
         self.window?.makeKeyAndVisible()
