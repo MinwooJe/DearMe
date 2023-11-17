@@ -12,7 +12,6 @@ final class PostImageView: UIView {
     let cameraImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "PostImagePicker")
-        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -63,6 +62,9 @@ extension PostImageView {
     private func configureLayout() {
         NSLayoutConstraint.activate([
             // MARK: Configure cameraContainerView Layout
+            
+            cameraImageView.widthAnchor.constraint(equalTo: widthAnchor),
+            cameraImageView.heightAnchor.constraint(equalTo: cameraImageView.widthAnchor),
             cameraImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             cameraImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             cameraImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
