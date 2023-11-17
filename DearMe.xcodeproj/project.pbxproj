@@ -14,6 +14,8 @@
 		566E7CF02B066E20008A875C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566E7CEE2B066E20008A875C /* LaunchScreen.storyboard */; };
 		566E7CFF2B067086008A875C /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CFE2B067086008A875C /* PostImageViewController.swift */; };
 		566E7D012B067097008A875C /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7D002B067097008A875C /* PostImageView.swift */; };
+		566E7D062B078436008A875C /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7D052B078436008A875C /* MainPageView.swift */; };
+		566E7D082B0784BD008A875C /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7D072B0784BD008A875C /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		566E7CF12B066E20008A875C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566E7CFE2B067086008A875C /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
 		566E7D002B067097008A875C /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
+		566E7D052B078436008A875C /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		566E7D072B0784BD008A875C /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				566E7CFE2B067086008A875C /* PostImageViewController.swift */,
+				566E7D072B0784BD008A875C /* MainPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				566E7D002B067097008A875C /* PostImageView.swift */,
+				566E7D052B078436008A875C /* MainPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				566E7CFF2B067086008A875C /* PostImageViewController.swift in Sources */,
+				566E7D082B0784BD008A875C /* MainPageViewController.swift in Sources */,
 				566E7CE82B066E1E008A875C /* ViewController.swift in Sources */,
+				566E7D062B078436008A875C /* MainPageView.swift in Sources */,
 				566E7CE42B066E1E008A875C /* AppDelegate.swift in Sources */,
 				566E7D012B067097008A875C /* PostImageView.swift in Sources */,
 				566E7CE62B066E1E008A875C /* SceneDelegate.swift in Sources */,

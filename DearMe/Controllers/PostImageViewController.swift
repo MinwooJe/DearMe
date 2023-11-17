@@ -77,7 +77,7 @@ extension PostImageViewController: PHPickerViewControllerDelegate {
                         }
                     }
                     if let error = error {
-                        print("에러")
+                        print(error)
                     }
                 }
             }
