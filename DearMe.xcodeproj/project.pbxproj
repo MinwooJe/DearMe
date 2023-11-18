@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56242DF42B0923C7004ADFD7 /* RecommendPlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56242DF32B0923C7004ADFD7 /* RecommendPlayListViewController.swift */; };
 		566E7CE42B066E1E008A875C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CE32B066E1E008A875C /* AppDelegate.swift */; };
 		566E7CE62B066E1E008A875C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CE52B066E1E008A875C /* SceneDelegate.swift */; };
 		566E7CE82B066E1E008A875C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7CE72B066E1E008A875C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56242DF32B0923C7004ADFD7 /* RecommendPlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlayListViewController.swift; sourceTree = "<group>"; };
 		566E7CE02B066E1E008A875C /* DearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566E7CE32B066E1E008A875C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		566E7CE52B066E1E008A875C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				566E7CFE2B067086008A875C /* PostImageViewController.swift */,
 				566E7D072B0784BD008A875C /* MainPageViewController.swift */,
+				56242DF32B0923C7004ADFD7 /* RecommendPlayListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				566E7CFF2B067086008A875C /* PostImageViewController.swift in Sources */,
 				566E7D082B0784BD008A875C /* MainPageViewController.swift in Sources */,
 				566E7CE82B066E1E008A875C /* ViewController.swift in Sources */,
+				56242DF42B0923C7004ADFD7 /* RecommendPlayListViewController.swift in Sources */,
 				566E7D062B078436008A875C /* MainPageView.swift in Sources */,
 				566E7CE42B066E1E008A875C /* AppDelegate.swift in Sources */,
 				566E7D012B067097008A875C /* PostImageView.swift in Sources */,
