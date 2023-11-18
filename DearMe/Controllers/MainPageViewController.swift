@@ -12,13 +12,37 @@ final class MainPageViewController: UIViewController {
     private let mainPageView = MainPageView()
 
     override func loadView() {
-        view = MainPageView()
+        view = mainPageView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureIntialSetting()
+        configureAddTarget()
     }
+}
 
+extension MainPageViewController {
+    private func configureIntialSetting() {
+        
+        let backBarButton = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        navigationItem.backBarButtonItem = backBarButton
+    }
+}
+
+extension MainPageViewController {
+    private func configureAddTarget() {
+        mainPageView.findButton.addTarget(self, action: #selector(didTapFindButton), for: .touchUpInside)
+    }
+    
+    @objc private func didTapFindButton() {
+        let postImageVC = PostImageViewController()
+        navigationController?.pushViewController(postImageVC, animated: true)
+    }
 }

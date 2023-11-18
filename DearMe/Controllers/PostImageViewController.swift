@@ -23,7 +23,40 @@ final class PostImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNaviBar()
         postImageView.configureTapPostImageAction(self, #selector(configureSelectImageAlert))
+    }
+}
+
+// MARK: Configure Navigation Bar
+
+extension PostImageViewController {
+    private func configureNaviBar() {
+        
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationController?.navigationBar.standardAppearance = navigationBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        navigationController?.navigationBar.tintColor = .black
+
+        navigationItem.standardAppearance = navigationBarAppearance
+        navigationItem.scrollEdgeAppearance = navigationBarAppearance
+        navigationItem.compactAppearance = navigationBarAppearance
+
+        navigationController?.setNeedsStatusBarAppearanceUpdate()
+        navigationController?.navigationBar.isTranslucent = false
+        
+        let rightBarButton: UIButton = {
+            let button = UIButton()
+            button.setTitle("완료", for: .normal)
+            button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+            button.sizeToFit()
+            return button
+        }()
+        
+        let rightBarButtonItem = UIBarButtonItem(customView: rightBarButton)
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
 }
 
