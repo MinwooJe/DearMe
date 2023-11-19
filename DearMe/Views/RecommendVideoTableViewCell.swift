@@ -16,20 +16,20 @@ class RecommendVideoTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    let videoTitleLabel: UILabel = {
+    var videoTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "HIHIHHIHI"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 22)
         label.textAlignment = .left
         label.numberOfLines = 4
         return label
     }()
     
-    let videoDescriptionLabel: UILabel = {
+    var videoDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "조회소 1214124"
         label.textColor = .systemGray2
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 18)
         label.textAlignment = .left
         label.numberOfLines = 1
         return label
@@ -71,8 +71,8 @@ extension RecommendVideoTableViewCell {
             thumbNailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             
             videoTitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            videoTitleLabel.topAnchor.constraint(equalTo: thumbNailImageView.topAnchor, constant: 5),
-            videoTitleLabel.leadingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
+            videoTitleLabel.topAnchor.constraint(equalTo: thumbNailImageView.bottomAnchor, constant: 5),
+            videoTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             
             videoDescriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             videoDescriptionLabel.topAnchor.constraint(equalTo: videoTitleLabel.bottomAnchor, constant: 3),
