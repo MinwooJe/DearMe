@@ -100,8 +100,8 @@
 		566E7CFC2B067071008A875C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				566E7D002B067097008A875C /* PostImageView.swift */,
 				566E7D052B078436008A875C /* MainPageView.swift */,
+				566E7D002B067097008A875C /* PostImageView.swift */,
 				56242DFD2B09EB6F004ADFD7 /* RecommendVideoTableViewCell.swift */,
 			);
 			path = Views;

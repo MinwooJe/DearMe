@@ -15,13 +15,13 @@ struct DummyModel {
 
 class DataManager {
     private var videoDataArray: [DummyModel] = [
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
-        DummyModel(videoImage: UIImage(named: "PostImagePicker")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
+        DummyModel(videoImage: UIImage(named: "testThumnail")!, videoTitle: "HIHIHI", videoDescription: "It's me - 조회수 3만회 - 1년전 "),
     ]
     
     func fetchMovieData() -> [DummyModel] {

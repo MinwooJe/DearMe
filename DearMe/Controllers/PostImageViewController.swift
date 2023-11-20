@@ -52,6 +52,7 @@ extension PostImageViewController {
             button.setTitleColor(.black, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
             button.sizeToFit()
+            button.addTarget(self, action: #selector(didTapRightBarButton), for: .touchUpInside)
             return button
         }()
         
@@ -80,6 +81,16 @@ extension PostImageViewController {
         alert.addAction(camera)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: Configure AddTarget
+
+extension PostImageViewController {
+    
+    @objc private func didTapRightBarButton() {
+        let recommendPlayListVC = RecommendPlayListViewController()
+        navigationController?.pushViewController(recommendPlayListVC, animated: true)
     }
 }
 

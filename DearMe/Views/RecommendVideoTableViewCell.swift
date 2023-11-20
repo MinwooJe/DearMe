@@ -12,6 +12,7 @@ class RecommendVideoTableViewCell: UITableViewCell {
     let thumbNailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.image = UIImage(named: "PostImagePicker")
         return imageView
     }()
@@ -65,10 +66,10 @@ extension RecommendVideoTableViewCell {
     private func configureLayout() {
         let contentView = self.contentView
         NSLayoutConstraint.activate([
-            thumbNailImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8),
-            thumbNailImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            thumbNailImageView.heightAnchor.constraint(equalTo: thumbNailImageView.widthAnchor, multiplier: 0.6),
             thumbNailImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             thumbNailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            thumbNailImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             videoTitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             videoTitleLabel.topAnchor.constraint(equalTo: thumbNailImageView.bottomAnchor, constant: 5),
@@ -76,6 +77,7 @@ extension RecommendVideoTableViewCell {
             
             videoDescriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             videoDescriptionLabel.topAnchor.constraint(equalTo: videoTitleLabel.bottomAnchor, constant: 3),
+            videoDescriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             videoDescriptionLabel.leadingAnchor.constraint(equalTo: videoTitleLabel.leadingAnchor),
         ])
     }
