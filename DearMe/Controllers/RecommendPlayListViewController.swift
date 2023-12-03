@@ -11,10 +11,15 @@ final class RecommendPlayListViewController: UIViewController {
     
     private let recommendTableView = UITableView()
     
-    private var recommendedVideoArray: [DummyModel] = []
+    private var recommendedVideoArray: [Item] = []
     
-    private let datamanager = DataManager()
+    private let dataManager = NetworkManager.shared
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureInitialSetting()
@@ -35,9 +40,21 @@ extension RecommendPlayListViewController {
     }
     
     private func fetchData() {
-        recommendedVideoArray = datamanager.fetchMovieData()
+        //        recommendedVideoArray =  datamanager.fetchMovieData()
+        self.recommendedVideoArray = []
+        
+        dataManager.fetchVideo(searchTerm: "신나는 플리") { result in
+            switch result {
+            case .success(let videoDatas):
+                self.recommendedVideoArray = videoDatas
+                DispatchQueue.main.async {
+                    self.recommendTableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
-    
 }
 
 // MARK: Implement TableView DataSource
@@ -51,15 +68,12 @@ extension RecommendPlayListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! RecommendVideoTableViewCell
         
-        cell.thumbNailImageView.image = recommendedVideoArray[indexPath.row].videoImage
-        cell.videoTitleLabel.text = recommendedVideoArray[indexPath.row].videoTitle
-        cell.videoDescriptionLabel.text = recommendedVideoArray[indexPath.row].videoDescription
-//        cell.selectionStyle = .none
-        
+        cell.imageUrl = recommendedVideoArray[indexPath.row].snippet.thumbnails.high.url
+        cell.videoTitleLabel.text = recommendedVideoArray[indexPath.row].snippet.title
+        cell.videoDescriptionLabel.text = recommendedVideoArray[indexPath.row].snippet.channelTitle
+
         return cell
     }
-    
-    
 }
 
 // MARK: Configure Layout
