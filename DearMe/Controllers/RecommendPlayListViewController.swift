@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class RecommendPlayListViewController: UIViewController {
     
@@ -34,7 +35,7 @@ extension RecommendPlayListViewController {
     
     private func configureInitialSetting() {
         recommendTableView.dataSource = self
-//        recommendTableView.delegate = self
+        recommendTableView.delegate = self
         recommendTableView.estimatedRowHeight = 300
         recommendTableView.register(RecommendVideoTableViewCell.self, forCellReuseIdentifier: "VideoCell")
     }
@@ -53,6 +54,20 @@ extension RecommendPlayListViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+}
+
+// MARK: Implement TableView Delegate
+
+extension RecommendPlayListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let videoURL = recommendedVideoArray[indexPath.row].snippet.thumbnails.thumbnailsDefault.url else { return }
+        if let url = URL(string: videoURL) {
+            let safariVC = SFSafariViewController(url: url)
+            safariVC.modalPresentationStyle = .fullScreen
+            self.present(safariVC, animated: true)
         }
     }
 }
@@ -95,6 +110,5 @@ extension RecommendPlayListViewController {
             recommendTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             recommendTableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
         ])
-        
     }
 }

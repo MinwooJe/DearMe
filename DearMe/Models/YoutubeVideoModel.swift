@@ -37,7 +37,7 @@ struct Thumbnails: Codable {
 
 // MARK: - Default
 struct ThumbnailDefault: Codable {
-    let url: String
+    let url: String?
 }
 
 // MARK: - VideoID

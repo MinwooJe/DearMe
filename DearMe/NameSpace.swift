@@ -10,5 +10,5 @@ import UIKit
 public enum VideoAPI {
     static let requestURL = "https://www.googleapis.com/youtube/v3/search?part=snippet"
     static let requestSetting = "music&chart=mostPopular&maxResults=50"
-    static let apiKey = ""
+    static let apiKey = "key="
 }
