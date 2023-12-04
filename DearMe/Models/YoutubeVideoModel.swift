@@ -7,6 +7,8 @@
 
 import Foundation
 
+// YouTube Data API - 검색 API 이용
+
 // MARK: - Welcome
 struct YouTubeResponse: Codable {
     let items: [Item]
@@ -42,5 +44,5 @@ struct ThumbnailDefault: Codable {
 
 // MARK: - VideoID
 struct VideoID: Codable {
-    let videoId: String
+    let videoId: String?
 }

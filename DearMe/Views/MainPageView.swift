@@ -36,6 +36,7 @@ final class MainPageView: UIView {
         super.init(frame: .zero)
         configureSubViews()
         configureLayout()
+        backgroundColor = #colorLiteral(red: 0.9921879172, green: 0.9921873212, blue: 0.9760842919, alpha: 1)
     }
     
     required init?(coder: NSCoder) {

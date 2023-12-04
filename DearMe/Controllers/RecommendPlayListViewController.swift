@@ -42,12 +42,15 @@ extension RecommendPlayListViewController {
     
     private func fetchData() {
         //        recommendedVideoArray =  datamanager.fetchMovieData()
-        self.recommendedVideoArray = []
+//        self.recommendedVideoArray = []
         
         dataManager.fetchVideo(searchTerm: "신나는 플리") { result in
             switch result {
             case .success(let videoDatas):
-                self.recommendedVideoArray = videoDatas
+                var tempArray = videoDatas
+                
+                self.recommendedVideoArray = tempArray
+                
                 DispatchQueue.main.async {
                     self.recommendTableView.reloadData()
                 }
@@ -63,7 +66,11 @@ extension RecommendPlayListViewController {
 extension RecommendPlayListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let videoURL = recommendedVideoArray[indexPath.row].snippet.thumbnails.thumbnailsDefault.url else { return }
+        
+        guard let videoID = recommendedVideoArray[indexPath.row].id.videoId else { return }
+
+        let videoURL = "https://www.youtube.com/watch?v=" + videoID
+        
         if let url = URL(string: videoURL) {
             let safariVC = SFSafariViewController(url: url)
             safariVC.modalPresentationStyle = .fullScreen

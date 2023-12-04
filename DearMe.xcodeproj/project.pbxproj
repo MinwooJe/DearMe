@@ -90,8 +90,8 @@
 		566E7CFB2B067066008A875C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				566E7CFE2B067086008A875C /* PostImageViewController.swift */,
 				566E7D072B0784BD008A875C /* MainPageViewController.swift */,
+				566E7CFE2B067086008A875C /* PostImageViewController.swift */,
 				56242DF32B0923C7004ADFD7 /* RecommendPlayListViewController.swift */,
 			);
 			path = Controllers;
