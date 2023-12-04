@@ -13,6 +13,15 @@ final class PostImageViewController: UIViewController {
     
     let postImageView = PostImageView()
     
+    let rightBarButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("완료", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        button.sizeToFit()
+        return button
+    }()
+    
     private var isCameraAuthorized: Bool {
       AVCaptureDevice.authorizationStatus(for: .video) == .authorized
     }
@@ -24,7 +33,16 @@ final class PostImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNaviBar()
+        configureInitialSetting()
         postImageView.configureTapPostImageAction(self, #selector(configureSelectImageAlert))
+        rightBarButton.addTarget(self, action: #selector(didTapRightBarButton), for: .touchUpInside)
+    }
+}
+
+extension PostImageViewController {
+    private func configureInitialSetting() {
+        rightBarButton.isEnabled = false
+        rightBarButton.setTitleColor(.gray, for: .disabled)
     }
 }
 
@@ -45,16 +63,6 @@ extension PostImageViewController {
 
         navigationController?.setNeedsStatusBarAppearanceUpdate()
         navigationController?.navigationBar.isTranslucent = false
-        
-        let rightBarButton: UIButton = {
-            let button = UIButton()
-            button.setTitle("완료", for: .normal)
-            button.setTitleColor(.black, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-            button.sizeToFit()
-            button.addTarget(self, action: #selector(didTapRightBarButton), for: .touchUpInside)
-            return button
-        }()
         
         let rightBarButtonItem = UIBarButtonItem(customView: rightBarButton)
         navigationItem.rightBarButtonItem = rightBarButtonItem
@@ -118,6 +126,10 @@ extension PostImageViewController: PHPickerViewControllerDelegate {
                     if let image = image as? UIImage {
                         DispatchQueue.main.async {
                             self.postImageView.cameraImageView.image = image
+                            
+                            if self.postImageView.cameraImageView.image != UIImage(named: "PostImagePicker") {
+                                self.rightBarButton.isEnabled = true
+                            }
                         }
                     }
                     if let error = error {
@@ -157,6 +169,10 @@ extension PostImageViewController: UIImagePickerControllerDelegate, UINavigation
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             postImageView.cameraImageView.image = image
             dismiss(animated: true)
+            
+            if postImageView.cameraImageView.image != UIImage(named: "PostImagePicker") {
+                rightBarButton.isEnabled = true
+            }
         }
     }
     
