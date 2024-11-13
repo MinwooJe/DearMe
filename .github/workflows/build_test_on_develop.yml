@@ -25,4 +25,4 @@ jobs:
     
     - name: Run tests 🧪
       run: |
-        xcodebuild test -project Popcorn-iOS/Popcorn-iOS.xcodeproj -scheme DearMe -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0'
+        xcodebuild test -project DearMe/DearMe.xcodeproj -scheme DearMe -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0'
