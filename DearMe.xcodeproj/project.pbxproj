@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,16 @@
 		566E7D082B0784BD008A875C /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E7D072B0784BD008A875C /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		569CE3B52CE4821C00C56FEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 566E7CD82B066E1E008A875C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 566E7CDF2B066E1E008A875C;
+			remoteInfo = DearMe;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		56242DF32B0923C7004ADFD7 /* RecommendPlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlayListViewController.swift; sourceTree = "<group>"; };
 		56242DF72B09DDB1004ADFD7 /* YoutubeVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoModel.swift; sourceTree = "<group>"; };
@@ -42,10 +52,22 @@
 		566E7D002B067097008A875C /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		566E7D052B078436008A875C /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		566E7D072B0784BD008A875C /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		569CE3B12CE4821C00C56FEE /* DearMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DearMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		569CE3B22CE4821C00C56FEE /* DearMeTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DearMeTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		566E7CDD2B066E1E008A875C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		569CE3AE2CE4821C00C56FEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				566E7CE22B066E1E008A875C /* DearMe */,
+				569CE3B22CE4821C00C56FEE /* DearMeTests */,
 				566E7CE12B066E1E008A875C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				566E7CE02B066E1E008A875C /* DearMe.app */,
+				569CE3B12CE4821C00C56FEE /* DearMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +162,29 @@
 			productReference = 566E7CE02B066E1E008A875C /* DearMe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		569CE3B02CE4821C00C56FEE /* DearMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 569CE3B92CE4821C00C56FEE /* Build configuration list for PBXNativeTarget "DearMeTests" */;
+			buildPhases = (
+				569CE3AD2CE4821C00C56FEE /* Sources */,
+				569CE3AE2CE4821C00C56FEE /* Frameworks */,
+				569CE3AF2CE4821C00C56FEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				569CE3B62CE4821C00C56FEE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				569CE3B22CE4821C00C56FEE /* DearMeTests */,
+			);
+			name = DearMeTests;
+			packageProductDependencies = (
+			);
+			productName = DearMeTests;
+			productReference = 569CE3B12CE4821C00C56FEE /* DearMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,11 +192,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					566E7CDF2B066E1E008A875C = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					569CE3B02CE4821C00C56FEE = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 566E7CDF2B066E1E008A875C;
 					};
 				};
 			};
@@ -167,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				566E7CDF2B066E1E008A875C /* DearMe */,
+				569CE3B02CE4821C00C56FEE /* DearMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +230,13 @@
 			files = (
 				566E7CF02B066E20008A875C /* LaunchScreen.storyboard in Resources */,
 				566E7CED2B066E20008A875C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		569CE3AF2CE4821C00C56FEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +263,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		569CE3AD2CE4821C00C56FEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		569CE3B62CE4821C00C56FEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 566E7CDF2B066E1E008A875C /* DearMe */;
+			targetProxy = 569CE3B52CE4821C00C56FEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		566E7CEE2B066E20008A875C /* LaunchScreen.storyboard */ = {
@@ -353,7 +427,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +457,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +468,52 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		569CE3B72CE4821C00C56FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JD4YAFH7N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Popcorn.DearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DearMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DearMe";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		569CE3B82CE4821C00C56FEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JD4YAFH7N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Popcorn.DearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DearMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DearMe";
+				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};
@@ -414,6 +534,15 @@
 			buildConfigurations = (
 				566E7CF52B066E20008A875C /* Debug */,
 				566E7CF62B066E20008A875C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		569CE3B92CE4821C00C56FEE /* Build configuration list for PBXNativeTarget "DearMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				569CE3B72CE4821C00C56FEE /* Debug */,
+				569CE3B82CE4821C00C56FEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
