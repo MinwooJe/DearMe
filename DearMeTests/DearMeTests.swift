@@ -19,8 +19,5 @@ final class DearMeTests: XCTestCase {
         XCTAssert(true)
     }
     
-//    func test_무조건_실패하는_테스트() throws {
-//        XCTAssert(false)
-//    }
 
 }
